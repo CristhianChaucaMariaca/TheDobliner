@@ -1,0 +1,22 @@
+.titulo{
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 100%;
+    &__content{
+        text-align: center;
+        width: 14em;
+        position: relative;
+        margin: 0 auto;
+    }
+    &__text{
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        width: 90%;
+        transform:translateY(42%) translateX(-50%);
+        color:$colorsecundario;
+        font-size: 1.35em;
+        text-transform: uppercase;
+    }
+}

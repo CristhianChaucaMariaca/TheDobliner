@@ -1,0 +1,27 @@
+.lists{
+    max-width: 700px;
+    margin:0 auto;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    &__header{
+        text-align: center;
+        width: 14em;
+        position: relative;
+        margin: 0 auto;
+    }
+    &__item{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 10px;
+    }
+    &__name{
+        font-size: 1.3em;
+    }
+    &__line{
+        flex-grow: 1;
+        border-bottom: 2px $colorprimario;
+        border-bottom-style: dotted;
+    }
+}

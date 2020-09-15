@@ -1,0 +1,21 @@
+extends ../templates/template-dishes
+include ../mixins/platos
+//- cambiar la varible | PAGE | para que se cambie el titulo de la pagina
+block append config
+    //- TODO: * Modificar INDEX del vector para seleccionar nombre de bebidas
+    - page = "Bebidas"
+block content
+    .container
+        .lists
+            include ../config/bebidas
+            include ../mixins/list
+            include ../mixins/titulo
+            //- TODO: * Modificar el INDEX del vector para seleccionar las bebidas a usar
+            +titulo(drinks[0].name)
+            .lists__content
+                each drink in drinks[0].items
+                    +body(drink)
+            +titulo(drinks[1].name)
+            .lists__content
+                each drink in drinks[1].items
+                    +body(drink)

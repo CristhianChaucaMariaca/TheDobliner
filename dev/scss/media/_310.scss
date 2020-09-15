@@ -1,0 +1,16 @@
+@media screen and(max-width:320px){
+    .dishes{
+        &__text{
+            font-size: 1.2em;
+        }
+    }
+    .menu{
+        grid-column-gap: 10px;
+        &__item{
+
+        }
+    }
+    .lists{
+        font-size: 1.1rem;
+    }
+}

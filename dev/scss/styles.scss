@@ -1,0 +1,17 @@
+@import "includes/variables";
+@import "includes/general";
+@import "includes/grid";
+@import "includes/text";
+
+// Blocks
+@import "blocks/menu";
+@import "blocks/loading";
+@import "blocks/header";
+@import "blocks/dishes";
+@import "blocks/plate";
+@import "blocks/lists";
+@import "blocks/btn_atras";
+@import "blocks/titulo";
+
+// Media Querys
+@import "media/media";

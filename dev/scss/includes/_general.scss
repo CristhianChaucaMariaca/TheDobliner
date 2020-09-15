@@ -1,0 +1,36 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+/* Responsive Resets
+-------------------------------------------------------------- */
+@-o-viewport {
+    width: device-width;
+}
+@-ms-viewport {
+    width: device-width;
+}
+@viewport {
+    width: device-width;
+}
+  
+html {
+    overflow-y: auto;
+}
+  
+img,
+audio,
+video,
+canvas {
+    max-width: 100%;
+}
+
+body{
+    @if $background{
+        background-image: url($background);
+    }
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+}

@@ -1,0 +1,18 @@
+.header{
+    width: 100%;
+    position: relative;
+    &__img{
+        max-width: 100%;
+        width: 100%;
+        z-index: 99;
+    }
+    &__logo{
+        width: 280px;
+        position: absolute;
+        z-index: 100;
+        bottom: 0;
+        left: 50%;
+        transform:translateY(45%) translateX(-50%);
+    }
+    margin-bottom: 100px;
+}

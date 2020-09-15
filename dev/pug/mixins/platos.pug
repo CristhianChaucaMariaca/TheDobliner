@@ -1,0 +1,8 @@
+mixin platos(link,img,text,price)
+    .dishes__plate
+        a(href=link).dishes__link
+            picture.dishes__picture
+                img.dishes__img(alt=text,srcset="media/"+plates.category+"/thumbnail/"+img.picture+"-thumbnail"+img.extention,loading="lazy")
+        .dishes__name
+            span.dishes__text #{text}
+            span.dishes__price #{price}

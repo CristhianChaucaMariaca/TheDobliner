@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="auth" content="Cristhian Chauca"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Nombre Pagina</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="theme-color" content="#3d2116"/>
+    <link rel="icon" href="media/steakhouse-icon.png" type="image/png"/>
+  </head>
+  <body>
+    <header class="header">
+      <picture>
+        <source class="header__img" media="(max-width: 480px)" srcset="media/steakhouse-header-small.png" alt="banner - header"/>
+        <source class="header__img" media="(max-width: 768px)" srcset="media/steakhouse-header-medium.png" alt="banner - header"/><img class="header__img" srcset="media/steakhouse-header-long.png" alt="banner - header"/>
+      </picture>
+      <picture><img class="header__logo" src="media/steakhouse.png" alt="Logo SteakHouse"/>
+        <source class="header__logo" media="(max-width: 480px)" srcset="media/steakhouse-small.png" alt="Logo SteakHouse"/>
+        <source class="header__logo" media="(max-width: 768px)" srcset="media/steakhouse-medium.png" alt="Logo SteakHouse"/>
+      </picture>
+    </header>
+    <div class="menu">
+      <div class="menu__body">
+        <nav class="menu__nav"><a class="menu__item" href="platos.html"><img class="menu__btn" src="media/boton.svg" alt=""/><span class="menu__text">Platos</span></a><a class="menu__item" href="bebidas.html"><img class="menu__btn" src="media/boton.svg" alt=""/><span class="menu__text">Bebidas</span></a>
+        </nav>
+      </div>
+    </div>
+    <div id="preloading">
+      <div class="load"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

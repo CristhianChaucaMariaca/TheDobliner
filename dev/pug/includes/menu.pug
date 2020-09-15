@@ -1,0 +1,8 @@
+include ../config/menu
+.menu
+    .menu__body
+        nav.menu__nav
+            each item in menu
+                a(href=item.link).menu__item
+                    img(src="media/"+boton, alt="").menu__btn
+                    span.menu__text #{item.name}

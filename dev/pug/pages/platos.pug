@@ -1,0 +1,12 @@
+extends ../templates/template-dishes
+include ../mixins/platos
+block append config
+    - page = plates.name
+    - metadescripcion = plates.descripcion
+block content
+    .container
+        .dishes
+            // TODO: * Modificar el | INCLUDE | y la variable de objetos
+            each plate in plates.content
+                if(plate.status === true)
+                    +platos(plate.link,plate.img,plate.text,plate.price_uno)
