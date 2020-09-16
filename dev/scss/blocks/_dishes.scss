@@ -1,20 +1,26 @@
 
 .headerdishes{
     font-size: 1.1em;
+    font-size: $febold;
     background-color: $colorprimario;
-    color:$colorsecundario;
+    color:$colortres;
     padding-bottom: 3px;
     padding-top: 3px;
     text-transform: uppercase;
     margin-bottom: 30px;
     position: relative;
+    height: 47px;
+    margin: 0 auto;
+    line-height: 2;
+    padding-left: 20px;
 }
 .dishes{
     display: grid;
-    grid-template-columns: repeat(4, minmax(190px,1fr));
-    grid-column-gap: 40px;
+    grid-template-columns: repeat(2, minmax(190px,1fr));
+    grid-column-gap: 20px;
     grid-row-gap: 30px;
     margin-bottom: 70px;
+    margin-top: 30px;
     &__link{
         text-decoration:none;
         width: 100%;
@@ -29,7 +35,14 @@
         display: block;
     }
     &__plate{
-
+        width: 209px;
+        &:nth-child(odd){
+            justify-self: right;
+        }
+        &:nth-child(even)
+        {
+            justify-self: left;
+        }
     }
     &__img{
         width: 100%;
@@ -45,5 +58,6 @@
         font-size: 1.3em;
         color:$colorprimario;
         justify-content: center;
+        font-family: $fbold;
     }
 }

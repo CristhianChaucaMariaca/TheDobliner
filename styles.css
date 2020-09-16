@@ -20,11 +20,11 @@ canvas {
 }
 
 body {
-  background-image: url("media/STEAKHOUSE-FONDO-PANTALLAS-PC.jpg");
+  background-image: url("media/fondo.jpg");
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-position: top;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .container {
@@ -32,14 +32,23 @@ body {
   width: 80%;
   margin: 0 auto;
   position: relative;
+  width: 547px;
 }
 
 @font-face {
-  font-family: Barnum;
-  src: url("fonts/p.t.barnumregular.ttf") format("truetype");
+  font-family: "Alberta Extra Bold";
+  src: url("fonts/albertaextraboldregular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alberta Regular";
+  src: url("fonts/albertaregular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alberta Bold";
+  src: url("fonts/albertabold.ttf") format("truetype");
 }
 body {
-  font-family: Barnum;
+  font-family: "Alberta Regular";
   font-size: 12pt;
 }
 
@@ -62,31 +71,29 @@ body {
   margin-bottom: 50px;
 }
 .menu__nav {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  justify-content: center;
+  width: 400px;
+  flex-wrap: wrap;
 }
 .menu__item {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  color: #ffe9d3;
+  color: #660000;
   position: relative;
   font-size: 1.3em;
-  width: 180px;
+  width: 120px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Alberta Extra Bold";
 }
 .menu__item:hover {
   transform: scale(1.05);
   transition: all 0.3s;
-}
-.menu__item:last-child {
-  grid-row-start: 3;
-  grid-column-end: 4;
-}
-.menu__item:nth-last-child(2) {
-  grid-row-start: 3;
-  grid-column-end: 3;
 }
 .menu__btn {
   width: 100%;
@@ -114,7 +121,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(71, 44, 15, 0.7);
+  background-color: rgba(255, 176, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,8 +129,8 @@ body {
 #preloading .load {
   width: 50px;
   height: 50px;
-  border-top: 5px solid #ffe9d3;
-  border-left: 5px solid #ffe9d3;
+  border-top: 5px solid #660000;
+  border-left: 5px solid #660000;
   border-radius: 100%;
   animation: girar 0.8s infinite linear;
   opacity: 0.7;
@@ -148,40 +155,43 @@ body {
 }
 .header {
   width: 100%;
-  position: relative;
-  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
 }
-.header__img {
-  max-width: 100%;
-  width: 100%;
-  z-index: 99;
+.header__picture {
+  display: block;
+  max-width: 200px;
+  width: 200px;
 }
 .header__logo {
-  width: 280px;
-  position: absolute;
-  z-index: 100;
-  bottom: 0;
-  left: 50%;
-  transform: translateY(45%) translateX(-50%);
+  max-width: 100%;
 }
 
 .headerdishes {
   font-size: 1.1em;
-  background-color: #472C0F;
-  color: #ffe9d3;
+  font-size: "Alberta Extra Bold";
+  background-color: #FFB000;
+  color: #004D00;
   padding-bottom: 3px;
   padding-top: 3px;
   text-transform: uppercase;
   margin-bottom: 30px;
   position: relative;
+  height: 47px;
+  margin: 0 auto;
+  line-height: 2;
+  padding-left: 20px;
 }
 
 .dishes {
   display: grid;
-  grid-template-columns: repeat(4, minmax(190px, 1fr));
-  grid-column-gap: 40px;
+  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  grid-column-gap: 20px;
   grid-row-gap: 30px;
   margin-bottom: 70px;
+  margin-top: 30px;
 }
 .dishes__link {
   text-decoration: none;
@@ -196,6 +206,15 @@ body {
 .dishes__picture {
   display: block;
 }
+.dishes__plate {
+  width: 209px;
+}
+.dishes__plate:nth-child(odd) {
+  justify-self: right;
+}
+.dishes__plate:nth-child(even) {
+  justify-self: left;
+}
 .dishes__img {
   width: 100%;
   min-height: 100px;
@@ -208,8 +227,9 @@ body {
 .dishes__name {
   text-align: center;
   font-size: 1.3em;
-  color: #472C0F;
+  color: #FFB000;
   justify-content: center;
+  font-family: "Alberta Bold";
 }
 
 .content__plate {
@@ -221,14 +241,14 @@ body {
 }
 
 .plate {
-  width: 420px;
+  width: 480px;
 }
 .plate__logo {
   position: absolute;
-  right: 15px;
-  top: 0;
-  transform: translateY(-40%);
-  width: 130px;
+  left: 30px;
+  bottom: 0;
+  transform: translateY(40%);
+  width: 80px;
   z-index: 100;
 }
 .plate__img {
@@ -248,25 +268,29 @@ body {
   transition: transform 5.5s linear;
 }
 .plate__body {
-  color: #472C0F;
+  color: #FFB000;
   padding-left: 30px;
   padding-right: 30px;
+  margin-top: 55px;
 }
 .plate__title {
-  font-size: 1.6em;
+  font-size: 1.7em;
   margin-top: 10px;
   margin-bottom: 7px;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Alberta Bold";
 }
 .plate__price {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.9em;
+  font-family: "Alberta Bold";
 }
 .plate__text {
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin-top: 7px;
   text-align: center;
+  font-family: "Alberta Regular";
 }
 .plate__pepsi {
   width: 40px;
@@ -302,7 +326,7 @@ body {
 }
 .lists__line {
   flex-grow: 1;
-  border-bottom: 2px #472C0F;
+  border-bottom: 2px #FFB000;
   border-bottom-style: dotted;
 }
 
@@ -334,7 +358,7 @@ body {
   bottom: 50%;
   width: 90%;
   transform: translateY(42%) translateX(-50%);
-  color: #ffe9d3;
+  color: #660000;
   font-size: 1.35em;
   text-transform: uppercase;
 }
@@ -349,12 +373,13 @@ body {
     font-size: 19px;
   }
 
-  .plate {
-    width: 37.5rem;
-  }
   .plate__logo {
-    width: 10.625rem;
+    width: 4.5em;
   }
+  .plate__pepsi {
+    margin-top: 80px;
+  }
+
   .lists {
     font-size: 1.5rem;
     max-width: 100%;
@@ -417,17 +442,23 @@ body {
 @media screen and (max-width: 480px) {
   body {
     font-size: 16px;
+    background-image: url("./media/fondo-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   .container {
-    width: 90%;
+    width: 100%;
   }
 
   .headerdishes {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   .dishes {
+    width: 90%;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 12px;
@@ -437,6 +468,10 @@ body {
     text-align: center;
     line-height: 0.92em;
   }
+  .dishes__plate {
+    width: 100%;
+  }
+
   .plate {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -450,37 +485,39 @@ body {
     padding-right: 10px;
   }
   .plate__logo {
-    right: 10px;
-    width: 140px;
+    width: 80px;
   }
   .plate__title {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.1em;
     margin-bottom: 14px;
   }
   .plate__price {
-    font-size: 1.6em;
+    font-size: 1.7em;
   }
   .plate__text {
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-top: 14px;
+  }
+  .plate__pepsi {
+    margin-top: 80px;
   }
 
   .header {
-    margin-bottom: 75px;
+    height: auto;
+    padding: 30px 0px;
   }
   .header__logo {
     width: 200px;
   }
 
-  .menu__nav {
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 15px;
-    grid-column-gap: 23px;
-  }
   .menu__item {
-    width: 140px;
-    font-size: 1em;
+    width: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 1.3em;
   }
 
   .lists {

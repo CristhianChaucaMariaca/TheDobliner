@@ -1,14 +1,20 @@
 @media screen and(max-width:480px){
     body{
         font-size: 16px;
+        background-image: url("./media/fondo-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
     }
     .container{
-        width: 90%;
+        width: 100%;
     }
     .headerdishes{
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
     .dishes{
+        width: 90%;
+        margin: 0 auto;
         grid-template-columns: repeat(2,1fr);
         grid-column-gap: 15px;
         grid-row-gap: 12px;
@@ -18,6 +24,9 @@
             line-height: .92em;
         }
         &__name{
+        }
+        &__plate{
+            width: 100%;
         }
     }
     .plate{
@@ -32,37 +41,42 @@
             padding-right: 10px;
         }
         &__logo{
-            right: 10px;
-            width: 140px;
+            width: 80px;
         }
         &__title{
-            font-size: 2em;
+            font-size: 1.5em;
             line-height: 1.1em;
             margin-bottom: 14px;
         }
         &__price{
-            font-size: 1.6em;
+            font-size: 1.7em;
         }
         &__text{
-            font-size: 1.3em;
+            font-size: 1.5em;
             margin-top: 14px;
+        }
+        &__pepsi{
+            margin-top: 80px;
         }
     }
     .header{
+        height: auto;
+        padding: 30px 0px;
         &__logo{
             width: 200px;
         }
-        margin-bottom: 75px;
     }
     .menu{
         &__nav{
-            grid-template-columns: repeat(2, 1fr);
-            grid-row-gap: 15px;
-            grid-column-gap: 23px;
+            
         }
         &__item{
-            width: 140px;
-            font-size: 1em;
+            width: 120px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            font-size: 1.3em;
         }
     }
     .lists{

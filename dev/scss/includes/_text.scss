@@ -1,8 +1,19 @@
 @font-face{
-    font-family: Barnum;
-    src: url($font) format('truetype');
+    font-family: "Alberta Extra Bold";
+    src: url($fontExtraBold) format('truetype');
 }
+@font-face{
+    font-family: "Alberta Regular";
+    src: url($fontRegular) format('truetype');
+}
+@font-face{
+    font-family: "Alberta Bold";
+    src: url($fontBold) format('truetype');
+}
+$febold:"Alberta Extra Bold";
+$fregular:"Alberta Regular";
+$fbold:"Alberta Bold";
 body{
-    font-family: Barnum;
+    font-family: $fregular;
     font-size: 12pt;
 }

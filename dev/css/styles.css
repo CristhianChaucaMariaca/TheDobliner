@@ -20,7 +20,7 @@ canvas {
 }
 
 body {
-  background-image: url("");
+  background-image: url("media/fondo.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
@@ -214,7 +214,7 @@ body {
 
 .content__plate {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,21 +290,12 @@ body {
   position: relative;
   margin: 0 auto;
 }
-.lists__title {
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  width: 90%;
-  transform: translateY(42%) translateX(-50%);
-  color: #ffe9d3;
-  font-size: 1.35em;
-  text-transform: uppercase;
-}
 .lists__item {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 10px;
 }
 .lists__name {
   font-size: 1.3em;
@@ -323,6 +314,29 @@ body {
 }
 .btn__img {
   width: 100%;
+}
+
+.titulo {
+  max-width: 100%;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.titulo__content {
+  text-align: center;
+  width: 14em;
+  position: relative;
+  margin: 0 auto;
+}
+.titulo__text {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 90%;
+  transform: translateY(42%) translateX(-50%);
+  color: #ffe9d3;
+  font-size: 1.35em;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1366px) {

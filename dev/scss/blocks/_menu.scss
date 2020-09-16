@@ -16,10 +16,11 @@
         margin-bottom: 50px;
     }
     &__nav{
-        display: grid;
+        display: flex;
         grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
+        justify-content: center;
+        width: 400px;
+        flex-wrap: wrap;
     }
     
     &__item{
@@ -29,18 +30,15 @@
         color:$colorsecundario;
         position: relative;
         font-size: 1.3em;
-        width: 180px;
+        width: 120px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: $febold;
         &:hover{
             transform: scale(1.05);
             transition:all .3s;
-        }
-        &:last-child{
-            grid-row-start: 3;
-            grid-column-end: 4;
-        }
-        &:nth-last-child(2){
-            grid-row-start: 3;
-            grid-column-end: 3;
         }
     }
     &__btn{
