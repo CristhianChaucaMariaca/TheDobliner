@@ -1,0 +1,21 @@
+extends ../../templates/template-plate.pug
+include ../../mixins/plato
+append config
+    // TODO: * modificar variable objeto
+    each plato in main_meals.content
+        // TODO: * modificar variable TITULO
+        if(plato.text == "Dubliner Steak")
+            - page = plato.text
+            - metadescripcion = plato.description
+block content
+    .content__plate
+        // TODO: * modificar variable objeto
+        each plato in main_meals.content
+            // TODO: * modificar variable TITULO
+            if(plato.text == "Dubliner Steak") 
+                //- TODO: * Modificar nombre de objeto para description
+                +plato(plato.img,plato.text,plato.price_uno,plato.price_dos,plato.description,sponsor[0],main_meals.category)
+            
+    include ../../blocks/btn_atras
+    //- TODO: * Modificar nombre de objeto para category
+    +btn(main_meals.category)

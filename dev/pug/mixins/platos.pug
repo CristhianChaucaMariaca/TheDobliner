@@ -1,8 +1,8 @@
-mixin platos(link,img,text,price)
+mixin platos(link,img,text,price,category)
     .dishes__plate
         a(href=link).dishes__link
             picture.dishes__picture
-                img.dishes__img(alt=text,srcset="media/"+pub_bites.category+"/thumbnail/"+img.picture+"-thumbnail"+img.extention,loading="lazy")
+                img.dishes__img(alt=text,srcset="./media/"+category+"/thumbnail/"+img.picture+"-thumbnail"+img.extention,loading="lazy")
         .dishes__name
             span.dishes__text #{text}
             span.dishes__price Bs #{price}

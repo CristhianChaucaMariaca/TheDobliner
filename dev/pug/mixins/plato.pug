@@ -1,11 +1,11 @@
 include sponsor
-mixin plato(img,title,price,pricetwo,ingredients,sponsor)
+mixin plato(img,title,price,pricetwo,ingredients,sponsor,category)
     .plate
         .plate__img
             .plate__logo
                 img(src="media/"+logo.img+logo.extention, alt=logo.alt)
             picture.plate__cont__picture
-                img.plate__picture(srcset="media/"+pub_bites.category+"/"+img.picture+img.extention, alt=title)
+                img.plate__picture(srcset="media/"+category+"/"+img.picture+img.extention, alt=title)
         .plate__body
             h2.plate__title !{title}
             p.plate__price Bs&nbsp;!{price}
