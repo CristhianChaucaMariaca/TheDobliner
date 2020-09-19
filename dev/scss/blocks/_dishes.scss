@@ -1,63 +1,59 @@
-
-.headerdishes{
-    font-size: 1.1em;
-    font-size: $febold;
-    background-color: $colorprimario;
-    color:$colortres;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    position: relative;
-    height: 47px;
-    margin: 0 auto;
-    line-height: 2;
-    padding-left: 20px;
+.headerdishes {
+  font-size: 1.2em;
+  font-size: $febold;
+  background-color: $colorprimario;
+  color: $colortres;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+  margin: 0 auto;
+  padding-left: 20px;
 }
-.dishes{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(190px,1fr));
-    grid-column-gap: 20px;
-    grid-row-gap: 30px;
-    margin-bottom: 70px;
-    margin-top: 30px;
-    &__link{
-        text-decoration:none;
-        width: 100%;
-        height: auto;
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  margin-bottom: 70px;
+  margin-top: 30px;
+  &__link {
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+  }
+  &__link:hover .dishes__img {
+    transform: scale(1.03);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  &__picture {
+    display: block;
+  }
+  &__plate {
+    width: 209px;
+    &:nth-child(odd) {
+      justify-self: right;
     }
-    &__link:hover .dishes__img{
-        transform:scale(1.03);
-        transform-origin: center;
-        transition:transform .3s ease;
+    &:nth-child(even) {
+      justify-self: left;
     }
-    &__picture{
-        display: block;
-    }
-    &__plate{
-        width: 209px;
-        &:nth-child(odd){
-            justify-self: right;
-        }
-        &:nth-child(even)
-        {
-            justify-self: left;
-        }
-    }
-    &__img{
-        width: 100%;
-        min-height: 100px;
-    }
-    &__text{
-        text-align: center;
-        width: 100%;
-        display: block;
-    }
-    &__name{
-        text-align: center;
-        font-size: 1.3em;
-        color:$colorprimario;
-        justify-content: center;
-        font-family: $fbold;
-    }
+  }
+  &__img {
+    width: 100%;
+    min-height: 100px;
+  }
+  &__text {
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+  &__name {
+    text-align: center;
+    font-size: 1.3em;
+    color: $colorprimario;
+    justify-content: center;
+    font-family: $fbold;
+  }
 }

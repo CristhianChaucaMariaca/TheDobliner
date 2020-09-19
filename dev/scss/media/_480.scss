@@ -1,88 +1,95 @@
-@media screen and(max-width:480px){
-    body{
-        font-size: 16px;
-        background-image: url("./media/fondo-small.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+@media screen and(max-width:480px) {
+  body {
+    font-size: 16px;
+    background-image: url("./media/fondo-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .container {
+    width: 100%;
+  }
+  .headerdishes {
+    margin-bottom: 25px;
+    padding-left: 0;
+    &__text {
+      margin: 0 auto;
+      width: 85%;
     }
-    .container{
-        width: 100%;
+  }
+  .dishes {
+    width: 85%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 12px;
+    font-size: 14px;
+    &__text {
+      text-align: center;
+      line-height: 0.92em;
     }
-    .headerdishes{
-        margin-bottom: 25px;
+    &__name {
+      font-size: 1.1em;
     }
-    .dishes{
-        width: 90%;
-        margin: 0 auto;
-        grid-template-columns: repeat(2,1fr);
-        grid-column-gap: 15px;
-        grid-row-gap: 12px;
-        font-size: 14px;
-        &__text{
-            text-align: center;
-            line-height: .92em;
-        }
-        &__name{
-        }
-        &__plate{
-            width: 100%;
-        }
+    &__plate {
+      width: 100%;
     }
-    .plate{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 16px;
-        &__img{
-            width: 100%;
-        }
-        &__body{
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        &__logo{
-            width: 80px;
-        }
-        &__title{
-            font-size: 1.5em;
-            line-height: 1.1em;
-            margin-bottom: 14px;
-        }
-        &__price{
-            font-size: 1.7em;
-        }
-        &__text{
-            font-size: 1.5em;
-            margin-top: 14px;
-        }
-        &__pepsi{
-            margin-top: 80px;
-        }
+  }
+  .plate {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    &__img {
+      width: 100%;
     }
-    .header{
-        height: auto;
-        padding: 30px 0px;
-        &__logo{
-            width: 200px;
-        }
+    &__body {
+      padding-left: 10px;
+      padding-right: 10px;
     }
-    .menu{
-        &__nav{
-            
-        }
-        &__item{
-            width: 120px;
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-top: 3px;
-            margin-bottom: 3px;
-            font-size: 1.3em;
-        }
+    &__logo {
+      width: 90px;
     }
-    .lists{
-        font-size: 1em;
+    &__title {
+      font-size: 1.3em;
+      line-height: 1.1em;
+      margin-bottom: 0px;
     }
-    .btn{
-        width: 80px;
+    &__price {
+      font-size: 1.7em;
     }
+    &__text {
+      font-size: 1.1em;
+      margin-top: 14px;
+    }
+    &__pepsi {
+      margin-top: 80px;
+    }
+  }
+  .header {
+    height: auto;
+    padding: 30px 0px;
+    &__picture {
+      //   width: 250px;
+    }
+  }
+  .menu {
+    &__nav {
+    }
+    &__body {
+    }
+    &__item {
+      width: 100px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      font-size: 1.2em;
+    }
+  }
+  .lists {
+    font-size: 1em;
+  }
+  .btn {
+    width: 80px;
+  }
 }

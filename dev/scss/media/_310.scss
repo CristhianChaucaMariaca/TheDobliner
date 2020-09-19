@@ -1,16 +1,21 @@
-@media screen and(max-width:320px){
-    .dishes{
-        &__text{
-            font-size: 1.2em;
-        }
+@media screen and(max-width:320px) {
+  .dishes {
+    &__text {
+      font-size: 1em;
     }
-    .menu{
-        grid-column-gap: 10px;
-        &__item{
-
-        }
+    &__price {
+      font-size: 1.1em;
     }
-    .lists{
-        font-size: 1.1rem;
+    &__name {
+      font-size: 1em;
     }
+  }
+  .menu {
+    grid-column-gap: 10px;
+    &__item {
+    }
+  }
+  .lists {
+    font-size: 1.1rem;
+  }
 }

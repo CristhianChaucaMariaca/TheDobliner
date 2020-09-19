@@ -26,6 +26,16 @@ body {
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
+  background-color: #004000;
+}
+
+.content-full {
+  min-height: 100vh;
+  max-width: 100wv;
+  min-width: 100wv;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container {
@@ -73,7 +83,6 @@ body {
 }
 .menu__nav {
   display: flex;
-  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   width: 400px;
   flex-wrap: wrap;
@@ -163,7 +172,7 @@ body {
 }
 .header__picture {
   display: block;
-  max-width: 200px;
+  max-width: 250px;
   width: 200px;
 }
 .header__logo {
@@ -171,18 +180,16 @@ body {
 }
 
 .headerdishes {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-size: "Alberta Extra Bold";
   background-color: #FFB000;
   color: #004D00;
-  padding-bottom: 3px;
-  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-top: 10px;
   text-transform: uppercase;
   margin-bottom: 30px;
   position: relative;
-  height: 47px;
   margin: 0 auto;
-  line-height: 2;
   padding-left: 20px;
 }
 
@@ -267,6 +274,8 @@ body {
 .plate__picture {
   width: 100%;
   transition: transform 5.5s linear;
+  border-bottom: 10px solid #FFB000;
+  border-top: 10px solid #FFB000;
 }
 .plate__body {
   color: #FFB000;
@@ -455,19 +464,27 @@ body {
 
   .headerdishes {
     margin-bottom: 25px;
+    padding-left: 0;
+  }
+  .headerdishes__text {
+    margin: 0 auto;
+    width: 85%;
   }
 
   .dishes {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15px;
+    grid-column-gap: 20px;
     grid-row-gap: 12px;
     font-size: 14px;
   }
   .dishes__text {
     text-align: center;
     line-height: 0.92em;
+  }
+  .dishes__name {
+    font-size: 1.1em;
   }
   .dishes__plate {
     width: 100%;
@@ -486,18 +503,18 @@ body {
     padding-right: 10px;
   }
   .plate__logo {
-    width: 80px;
+    width: 90px;
   }
   .plate__title {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.1em;
-    margin-bottom: 14px;
+    margin-bottom: 0px;
   }
   .plate__price {
     font-size: 1.7em;
   }
   .plate__text {
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin-top: 14px;
   }
   .plate__pepsi {
@@ -508,17 +525,13 @@ body {
     height: auto;
     padding: 30px 0px;
   }
-  .header__logo {
-    width: 200px;
-  }
-
   .menu__item {
-    width: 120px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 3px;
     margin-bottom: 3px;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .lists {
@@ -531,7 +544,13 @@ body {
 }
 @media screen and (max-width: 320px) {
   .dishes__text {
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+  .dishes__price {
+    font-size: 1.1em;
+  }
+  .dishes__name {
+    font-size: 1em;
   }
 
   .menu {
