@@ -1,0 +1,30 @@
+.sponsors {
+  width: 100%;
+  max-width: 100%;
+  &__content {
+    width: 60px;
+    align-self: start;
+    margin-top: 40px;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__img {
+    max-width: 100%;
+  }
+}
+#Pacenia {
+  width: 100px;
+}
+#huari {
+  width: 100px;
+}
+#Guarana {
+  width: 70px;
+}

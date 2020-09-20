@@ -324,12 +324,22 @@ body {
   position: relative;
   margin: 0 auto;
 }
+.lists__title {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 90%;
+  transform: translateY(42%) translateX(-50%);
+  color: #660000;
+  font-size: 1.35em;
+  text-transform: uppercase;
+}
 .lists__item {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 .lists__name {
   font-size: 1.3em;
@@ -338,6 +348,26 @@ body {
   flex-grow: 1;
   border-bottom: 2px #FFB000;
   border-bottom-style: dotted;
+}
+.lists--uno {
+  flex-grow: 1;
+}
+.lists--prices {
+  width: 70px;
+  text-align: center;
+}
+.lists__names {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+.lists__drinkname {
+  height: 1px;
+  flex-grow: 1;
+}
+.lists__name-price {
+  width: 70px;
+  text-align: center;
 }
 
 .btn {
@@ -371,6 +401,40 @@ body {
   color: #660000;
   font-size: 1.35em;
   text-transform: uppercase;
+}
+
+.sponsors {
+  width: 100%;
+  max-width: 100%;
+}
+.sponsors__content {
+  width: 60px;
+  align-self: start;
+  margin-top: 40px;
+  align-self: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.sponsors__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sponsors__img {
+  max-width: 100%;
+}
+
+#Pacenia {
+  width: 100px;
+}
+
+#huari {
+  width: 100px;
+}
+
+#Guarana {
+  width: 70px;
 }
 
 @media screen and (max-width: 1366px) {

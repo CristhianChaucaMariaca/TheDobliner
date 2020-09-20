@@ -1,3 +1,12 @@
 mixin sponsor(sponsor)
-    .plate__pepsi
-        img(alt="logo "+sponsor.name, srcset="media/"+sponsor.name+sponsor.extension)
+    .sponsors__content(id=sponsor.name)
+        img.sponsors__img(alt="Sponsor "+sponsor.name, srcset="media/"+sponsor.img+sponsor.extencion)
+mixin sponsors(sponsors)
+    .sponsors
+        .sponsors__body
+            each sponsor in sponsors
+                +sponsordos(sponsor)
+
+mixin sponsordos(sponsor)
+    .sponsors__content(id=sponsor.name)
+        img.sponsors__img(alt="Sponsor "+sponsor.name, srcset="media/"+sponsor.img+sponsor.extencion)

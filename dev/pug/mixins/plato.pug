@@ -12,4 +12,7 @@ mixin plato(img,title,price,pricetwo,ingredients,sponsor,category)
             if(pricetwo != "")
                 p.plate__price Bs&nbsp;!{pricetwo}
             p.plate__text !{ingredients}
-        +sponsor(sponsor)
+        .sponsors
+            .sponsors__body
+                include sponsor
+                +sponsor(sponsor)
