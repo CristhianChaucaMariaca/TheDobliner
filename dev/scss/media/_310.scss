@@ -13,6 +13,10 @@
   .menu {
     grid-column-gap: 10px;
     &__item {
+      width: 80px;
+      font-size: 1em;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
   .lists {
