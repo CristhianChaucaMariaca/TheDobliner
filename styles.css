@@ -466,6 +466,7 @@ body {
     grid-column-gap: 20px;
     grid-row-gap: 12px;
     font-size: 14px;
+    margin-bottom: 120px;
   }
   .dishes__text {
     text-align: center;
