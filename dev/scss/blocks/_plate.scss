@@ -1,13 +1,14 @@
 .content__plate {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .plate {
   width: 480px;
-  // margin-top: 50px;
   &__logo {
     position: absolute;
     left: 30px;

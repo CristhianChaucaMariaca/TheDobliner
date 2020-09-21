@@ -3,6 +3,7 @@
   margin: 0 auto;
   font-size: 1rem;
   margin-bottom: 50px;
+  margin-top: 30px;
 
   &__header {
     text-align: center;
@@ -11,14 +12,10 @@
     margin: 0 auto;
   }
   &__title {
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-    width: 90%;
-    transform: translateY(42%) translateX(-50%);
-    color: $colorsecundario;
+    color: white;
     font-size: 1.35em;
     text-transform: uppercase;
+    margin-bottom: 20px;
   }
   &__marco {
   }
@@ -30,6 +27,7 @@
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 7px;
+    color: $colorprimario;
   }
   &__name {
     font-size: 1.3em;
@@ -37,7 +35,6 @@
   &__line {
     flex-grow: 1;
     border-bottom: 2px $colorprimario;
-    border-bottom-style: dotted;
   }
   &--uno {
     flex-grow: 1;
@@ -58,5 +55,6 @@
   &__name-price {
     width: 70px;
     text-align: center;
+    color: $colorprimario;
   }
 }
