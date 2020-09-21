@@ -14,7 +14,8 @@ block content
             // TODO: * modificar variable TITULO
             if(plato.text == "Irish Pique Macho (Res - pollo - mixto)") 
                 //- TODO: * Modificar nombre de objeto para description
-                +plato(plato.img,plato.text,plato.price_uno,plato.price_dos,plato.description,sponsor[5],main_meals.category)
+                - var modificador = {uno:"",dos:"- Grande",tres:false}
+                +platodos(plato,sponsor[0],main_meals.category, modificador)
             
     include ../../blocks/btn_atras
     //- TODO: * Modificar nombre de objeto para category
