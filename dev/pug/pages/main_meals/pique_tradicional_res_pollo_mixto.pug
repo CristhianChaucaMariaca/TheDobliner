@@ -4,7 +4,7 @@ append config
     // TODO: * modificar variable objeto
     each plato in main_meals.content
         // TODO: * modificar variable TITULO
-        if(plato.text == "Pique Tradicional (res - pollo - mixto)")
+        if(plato.text == "Pique Tradicional<br>(res - pollo - mixto)")
             - page = plato.text
             - metadescripcion = plato.description
 block content
@@ -12,7 +12,7 @@ block content
         // TODO: * modificar variable objeto
         each plato in main_meals.content
             // TODO: * modificar variable TITULO
-            if(plato.text == "Pique Tradicional (res - pollo - mixto)") 
+            if(plato.text == "Pique Tradicional<br>(res - pollo - mixto)") 
                 //- TODO: * Modificar nombre de objeto para description
                 - var modificador = {uno:"",dos:"- Grande",tres:false}
                 +platodos(plato,sponsor[0],main_meals.category, modificador)
