@@ -305,11 +305,12 @@ body {
 }
 
 .lists {
+  font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1rem;
   margin-bottom: 50px;
   margin-top: 30px;
+  color: #FFB000;
 }
 .lists__header {
   text-align: center;
@@ -318,10 +319,11 @@ body {
   margin: 0 auto;
 }
 .lists__title {
-  color: white;
   font-size: 1.35em;
   text-transform: uppercase;
   margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: "Alberta Regular";
 }
 .lists__item {
   display: flex;
@@ -329,14 +331,11 @@ body {
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 7px;
-  color: #FFB000;
+  position: relative;
 }
 .lists__name {
-  font-size: 1.3em;
-}
-.lists__line {
+  font-size: 1em;
   flex-grow: 1;
-  border-bottom: 2px #FFB000;
 }
 .lists--uno {
   flex-grow: 1;
@@ -357,7 +356,47 @@ body {
 .lists__name-price {
   width: 70px;
   text-align: center;
-  color: #FFB000;
+}
+.lists__price {
+  width: 70px;
+  text-align: right;
+}
+.lists__price--right {
+  text-align: right;
+  width: 50px;
+}
+
+.chops {
+  display: flex;
+  flex-direction: column;
+}
+.chops__header {
+  display: flex;
+}
+.chops__name {
+  min-height: 1px;
+  width: 70px;
+  text-align: right;
+}
+.chops__name:first-child {
+  flex-grow: 1;
+}
+.chops__name-bebida {
+  flex-grow: 1;
+}
+.chops__price {
+  text-align: right;
+}
+.chops__body {
+  display: flex;
+  flex-direction: row;
+}
+.chops__prices {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+}
+.chops__items {
+  flex-grow: 1;
 }
 
 .btn {
@@ -585,14 +624,6 @@ body {
     width: 100px;
   }
 
-  .lists {
-    font-size: 1em;
-  }
-  .lists__content {
-    width: 85%;
-    margin: 0 auto;
-  }
-
   .btn {
     width: 80px;
   }
@@ -600,8 +631,30 @@ body {
   .sponsors__body {
     flex-direction: column;
   }
+
+  .lists {
+    font-size: 0.9em;
+  }
+  .lists__content {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .chops__prices {
+    grid-template-columns: repeat(4, 50px);
+  }
+  .chops__price {
+    width: 50px;
+  }
+  .chops__name {
+    width: 50px;
+  }
 }
 @media screen and (max-width: 320px) {
+  body {
+    font-size: 16px;
+  }
+
   .dishes__text {
     font-size: 1em;
   }
@@ -620,9 +673,5 @@ body {
     font-size: 1em;
     margin-left: 20px;
     margin-right: 20px;
-  }
-
-  .lists {
-    font-size: 1.1rem;
   }
 }

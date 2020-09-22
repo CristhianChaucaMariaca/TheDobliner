@@ -8,24 +8,23 @@ mixin body(items)
         each item in items
             .lists__item
                 p.lists__name #{item.name}
-                p.lists__line
                 p.lists__price #{item.price}
+                if(item.price_dos)
+                    p.lists__price--right #{item.price_dos}
+- var names = ["","Vaso","500ml", "Lt.","Pitcher"]
 mixin chops(items)
     .lists__body
-        .lists__names
-                .lists__drinkname
-                .lists__name-price
-                    p Vaso
-                .lists__name-price
-                    p 500ml
-                .lists__name-price
-                    p Lt.
-                .lists__name-price
-                    p Pitcher
-        each item in items
-            .lists__item
-                p.lists__name.lists--uno #{item.name}
-                p.lists__price.lists--prices #{item.priceuno}
-                p.lists__price.lists--prices #{item.pricedos}
-                p.lists__price.lists--prices #{item.pricetres}
-                p.lists__price.lists--prices #{item.pricecuatro}
+        .chops
+            .chops__header
+                each name in names
+                    .chops__name !{name}
+            .chops__body
+                .chops__items
+                    each item in items
+                        p.chops__name-bebida #{item.name}
+                .chops__prices
+                    each item in items
+                        p.chops__price #{item.priceuno}
+                        p.chops__price #{item.pricedos}
+                        p.chops__price #{item.pricetres}
+                        p.chops__price #{item.pricecuatro}
