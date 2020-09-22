@@ -91,8 +91,17 @@
   }
   .lists {
     font-size: 1em;
+    &__content {
+      width: 85%;
+      margin: 0 auto;
+    }
   }
   .btn {
     width: 80px;
+  }
+  .sponsors {
+    &__body {
+      flex-direction: column;
+    }
   }
 }

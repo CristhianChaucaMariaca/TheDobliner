@@ -43,7 +43,6 @@ body {
   width: 80%;
   margin: 0 auto;
   position: relative;
-  width: 547px;
 }
 
 @font-face {
@@ -173,7 +172,7 @@ body {
 .header__picture {
   display: block;
   max-width: 250px;
-  width: 200px;
+  width: 230px;
 }
 .header__logo {
   max-width: 100%;
@@ -195,7 +194,7 @@ body {
 
 .dishes {
   display: grid;
-  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 30px;
   margin-bottom: 70px;
@@ -295,7 +294,7 @@ body {
 }
 .plate__price {
   text-align: center;
-  font-size: 1.9em;
+  font-size: 1.6em;
   font-family: "Alberta Bold";
 }
 .plate__text {
@@ -411,7 +410,7 @@ body {
 .sponsors__content {
   width: 60px;
   align-self: start;
-  margin-top: 40px;
+  margin-top: 80px;
   align-self: center;
   margin-left: 10px;
   margin-right: 10px;
@@ -598,9 +597,17 @@ body {
   .lists {
     font-size: 1em;
   }
+  .lists__content {
+    width: 85%;
+    margin: 0 auto;
+  }
 
   .btn {
     width: 80px;
+  }
+
+  .sponsors__body {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 320px) {
