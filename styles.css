@@ -195,7 +195,7 @@ body {
 .dishes {
   display: grid;
   grid-template-columns: repeat(4, minmax(190px, 1fr));
-  grid-column-gap: 20px;
+  grid-column-gap: 25px;
   grid-row-gap: 30px;
   margin-bottom: 70px;
   margin-top: 30px;
@@ -212,15 +212,6 @@ body {
 }
 .dishes__picture {
   display: block;
-}
-.dishes__plate {
-  width: 209px;
-}
-.dishes__plate:nth-child(odd) {
-  justify-self: right;
-}
-.dishes__plate:nth-child(even) {
-  justify-self: left;
 }
 .dishes__img {
   width: 100%;

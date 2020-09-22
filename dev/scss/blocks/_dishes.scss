@@ -14,7 +14,7 @@
 .dishes {
   display: grid;
   grid-template-columns: repeat(4, minmax(190px, 1fr));
-  grid-column-gap: 20px;
+  grid-column-gap: 25px;
   grid-row-gap: 30px;
   margin-bottom: 70px;
   margin-top: 30px;
@@ -32,13 +32,6 @@
     display: block;
   }
   &__plate {
-    width: 209px;
-    &:nth-child(odd) {
-      justify-self: right;
-    }
-    &:nth-child(even) {
-      justify-self: left;
-    }
   }
   &__img {
     width: 100%;
