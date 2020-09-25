@@ -22,9 +22,20 @@ canvas {
 body {
   background-image: url("media/fondo.jpg");
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-position: top;
   background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-color: #004000;
+}
+
+.content-full {
+  min-height: 100vh;
+  max-width: 100wv;
+  min-width: 100wv;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container {
@@ -35,11 +46,19 @@ body {
 }
 
 @font-face {
-  font-family: Barnum;
-  src: url("fonts/p.t.barnumregular.ttf") format("truetype");
+  font-family: "Alberta Extra Bold";
+  src: url("fonts/albertaextraboldregular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alberta Regular";
+  src: url("fonts/albertaregular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alberta Bold";
+  src: url("fonts/albertabold.ttf") format("truetype");
 }
 body {
-  font-family: Barnum;
+  font-family: "Alberta Regular";
   font-size: 12pt;
 }
 
@@ -62,31 +81,28 @@ body {
   margin-bottom: 50px;
 }
 .menu__nav {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  flex-wrap: wrap;
 }
 .menu__item {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  color: #ffe9d3;
+  color: #660000;
   position: relative;
   font-size: 1.3em;
-  width: 180px;
+  width: 120px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Alberta Extra Bold";
 }
 .menu__item:hover {
   transform: scale(1.05);
   transition: all 0.3s;
-}
-.menu__item:last-child {
-  grid-row-start: 3;
-  grid-column-end: 4;
-}
-.menu__item:nth-last-child(2) {
-  grid-row-start: 3;
-  grid-column-end: 3;
 }
 .menu__btn {
   width: 100%;
@@ -114,7 +130,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(71, 44, 15, 0.7);
+  background-color: rgba(255, 176, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,8 +138,8 @@ body {
 #preloading .load {
   width: 50px;
   height: 50px;
-  border-top: 5px solid #ffe9d3;
-  border-left: 5px solid #ffe9d3;
+  border-top: 5px solid #660000;
+  border-left: 5px solid #660000;
   border-radius: 100%;
   animation: girar 0.8s infinite linear;
   opacity: 0.7;
@@ -148,32 +164,32 @@ body {
 }
 .header {
   width: 100%;
-  position: relative;
-  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
 }
-.header__img {
-  max-width: 100%;
-  width: 100%;
-  z-index: 99;
+.header__picture {
+  display: block;
+  max-width: 250px;
+  width: 230px;
 }
 .header__logo {
-  width: 280px;
-  position: absolute;
-  z-index: 100;
-  bottom: 0;
-  left: 50%;
-  transform: translateY(45%) translateX(-50%);
+  max-width: 100%;
 }
 
 .headerdishes {
-  font-size: 1.1em;
-  background-color: #472C0F;
-  color: #ffe9d3;
-  padding-bottom: 3px;
-  padding-top: 3px;
+  font-size: 1.2em;
+  font-size: "Alberta Extra Bold";
+  background-color: #FFB000;
+  color: #004D00;
+  padding-bottom: 5px;
+  padding-top: 10px;
   text-transform: uppercase;
   margin-bottom: 30px;
   position: relative;
+  margin: 0 auto;
+  padding-left: 20px;
 }
 
 .dishes {
@@ -182,6 +198,7 @@ body {
   grid-column-gap: 40px;
   grid-row-gap: 30px;
   margin-bottom: 70px;
+  margin-top: 30px;
 }
 .dishes__link {
   text-decoration: none;
@@ -208,27 +225,30 @@ body {
 .dishes__name {
   text-align: center;
   font-size: 1.3em;
-  color: #472C0F;
+  color: #FFB000;
   justify-content: center;
+  font-family: "Alberta Bold";
 }
 
 .content__plate {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .plate {
-  width: 420px;
+  width: 480px;
 }
 .plate__logo {
   position: absolute;
-  right: 15px;
-  top: 0;
-  transform: translateY(-40%);
-  width: 130px;
+  left: 30px;
+  bottom: 0;
+  transform: translateY(40%);
+  width: 80px;
   z-index: 100;
 }
 .plate__img {
@@ -246,27 +266,33 @@ body {
 .plate__picture {
   width: 100%;
   transition: transform 5.5s linear;
+  border-bottom: 10px solid #FFB000;
+  border-top: 10px solid #FFB000;
 }
 .plate__body {
-  color: #472C0F;
+  color: #FFB000;
   padding-left: 30px;
   padding-right: 30px;
+  margin-top: 55px;
 }
 .plate__title {
-  font-size: 1.6em;
+  font-size: 1.7em;
   margin-top: 10px;
   margin-bottom: 7px;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Alberta Bold";
 }
 .plate__price {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.6em;
+  font-family: "Alberta Bold";
 }
 .plate__text {
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin-top: 7px;
   text-align: center;
+  font-family: "Alberta Regular";
 }
 .plate__pepsi {
   width: 40px;
@@ -279,10 +305,12 @@ body {
 }
 
 .lists {
+  font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1rem;
   margin-bottom: 50px;
+  margin-top: 30px;
+  color: #FFB000;
 }
 .lists__header {
   text-align: center;
@@ -290,20 +318,85 @@ body {
   position: relative;
   margin: 0 auto;
 }
+.lists__title {
+  font-size: 1.35em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: "Alberta Regular";
+}
 .lists__item {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+  position: relative;
 }
 .lists__name {
-  font-size: 1.3em;
-}
-.lists__line {
+  font-size: 1em;
   flex-grow: 1;
-  border-bottom: 2px #472C0F;
-  border-bottom-style: dotted;
+}
+.lists--uno {
+  flex-grow: 1;
+}
+.lists--prices {
+  width: 70px;
+  text-align: center;
+}
+.lists__names {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+.lists__drinkname {
+  height: 1px;
+  flex-grow: 1;
+}
+.lists__name-price {
+  width: 70px;
+  text-align: center;
+}
+.lists__price {
+  width: 70px;
+  text-align: right;
+}
+.lists__price--right {
+  text-align: right;
+  width: 50px;
+}
+
+.chops {
+  display: flex;
+  flex-direction: column;
+}
+.chops__header {
+  display: flex;
+}
+.chops__name {
+  min-height: 1px;
+  width: 70px;
+  text-align: right;
+}
+.chops__name:first-child {
+  flex-grow: 1;
+}
+.chops__name-bebida {
+  flex-grow: 1;
+}
+.chops__price {
+  text-align: right;
+}
+.chops__body {
+  display: flex;
+  flex-direction: row;
+}
+.chops__prices {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+}
+.chops__items {
+  flex-grow: 1;
 }
 
 .btn {
@@ -311,6 +404,7 @@ body {
   bottom: 50px;
   right: 50px;
   max-width: 100px;
+  width: 90px;
 }
 .btn__img {
   width: 100%;
@@ -334,9 +428,43 @@ body {
   bottom: 50%;
   width: 90%;
   transform: translateY(42%) translateX(-50%);
-  color: #ffe9d3;
+  color: #660000;
   font-size: 1.35em;
   text-transform: uppercase;
+}
+
+.sponsors {
+  width: 100%;
+  max-width: 100%;
+}
+.sponsors__content {
+  width: 60px;
+  align-self: start;
+  margin-top: 80px;
+  align-self: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.sponsors__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sponsors__img {
+  max-width: 100%;
+}
+
+#Pacenia {
+  width: 100px;
+}
+
+#huari {
+  width: 100px;
+}
+
+#Guarana {
+  width: 70px;
 }
 
 @media screen and (max-width: 1366px) {
@@ -349,12 +477,13 @@ body {
     font-size: 19px;
   }
 
-  .plate {
-    width: 37.5rem;
-  }
   .plate__logo {
-    width: 10.625rem;
+    width: 4.5em;
   }
+  .plate__pepsi {
+    margin-top: 80px;
+  }
+
   .lists {
     font-size: 1.5rem;
     max-width: 100%;
@@ -365,22 +494,10 @@ body {
     width: 90%;
   }
 
-  .menu__nav {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-  .menu__item {
-    width: 160px;
-  }
   .menu__item:last-child {
     grid-row-start: auto;
     grid-column-end: auto;
   }
-  .menu__item:nth-last-child(2) {
-    grid-row-start: auto;
-    grid-column-end: auto;
-  }
-
   .header__logo {
     width: 250px;
   }
@@ -397,7 +514,7 @@ body {
     width: 100%;
   }
   .plate__logo {
-    width: 11.25rem;
+    width: 7rem;
   }
   .plate__pepsi {
     width: 50px;
@@ -417,26 +534,50 @@ body {
 @media screen and (max-width: 480px) {
   body {
     font-size: 16px;
+    background-image: url("./media/fondo-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   .container {
-    width: 90%;
+    width: 100%;
   }
 
   .headerdishes {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+  .headerdishes__text {
+    margin: 0 auto;
+    width: 85%;
   }
 
   .dishes {
+    width: 85%;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15px;
+    grid-column-gap: 20px;
     grid-row-gap: 12px;
     font-size: 14px;
+    margin-bottom: 120px;
   }
   .dishes__text {
     text-align: center;
     line-height: 0.92em;
   }
+  .dishes__name {
+    font-size: 1.1em;
+  }
+  .dishes__plate {
+    width: 100%;
+  }
+
+  .content__plate {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
   .plate {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -450,56 +591,87 @@ body {
     padding-right: 10px;
   }
   .plate__logo {
-    right: 10px;
-    width: 140px;
+    width: 90px;
   }
   .plate__title {
-    font-size: 2em;
+    font-size: 1.3em;
     line-height: 1.1em;
-    margin-bottom: 14px;
+    margin-bottom: 0px;
   }
   .plate__price {
-    font-size: 1.6em;
+    font-size: 1.7em;
   }
   .plate__text {
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin-top: 14px;
+  }
+  .plate__pepsi {
+    margin-top: 80px;
   }
 
   .header {
-    margin-bottom: 75px;
+    height: auto;
+    padding: 30px 0px;
   }
-  .header__logo {
-    width: 200px;
-  }
-
   .menu__nav {
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 15px;
-    grid-column-gap: 23px;
+    width: 100%;
+  }
+  .menu__body {
+    width: 100%;
   }
   .menu__item {
-    width: 140px;
-    font-size: 1em;
-  }
-
-  .lists {
-    font-size: 1em;
+    font-size: 1.2em;
+    width: 100px;
   }
 
   .btn {
     width: 80px;
   }
+
+  .sponsors__body {
+    flex-direction: column;
+  }
+
+  .lists {
+    font-size: 0.9em;
+  }
+  .lists__content {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .chops__prices {
+    grid-template-columns: repeat(4, 50px);
+  }
+  .chops__price {
+    width: 50px;
+  }
+  .chops__name {
+    width: 50px;
+  }
 }
 @media screen and (max-width: 320px) {
+  body {
+    font-size: 16px;
+  }
+
   .dishes__text {
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+  .dishes__price {
+    font-size: 1.1em;
+  }
+  .dishes__name {
+    font-size: 1em;
   }
 
   .menu {
     grid-column-gap: 10px;
   }
-  .lists {
-    font-size: 1.1rem;
+  .menu__item {
+    width: 80px;
+    font-size: 1em;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
