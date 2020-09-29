@@ -1,0 +1,12 @@
+extends ../templates/template-dishes
+include ../mixins/platos
+block append config
+    - page = combos.name
+    - metadescripcion = combos.descripcion
+block content
+    .container
+        .dishes
+            // TODO: * Modificar el | INCLUDE | y la variable de objetos
+            each plate in combos.content
+                if(plate.status === true)
+                    +platos(plate,combos.category)
