@@ -321,8 +321,8 @@ body {
 .lists__title {
   font-size: 1.35em;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
   font-family: "Alberta Regular";
 }
 .lists__item {
@@ -514,7 +514,7 @@ body {
     width: 100%;
   }
   .plate__logo {
-    width: 11.25rem;
+    width: 7rem;
   }
   .plate__pepsi {
     width: 50px;
