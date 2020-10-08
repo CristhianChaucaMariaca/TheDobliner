@@ -45,3 +45,9 @@
     width: 90px;
   }
 }
+@media (max-width:720px)
+{
+  .dishes{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
