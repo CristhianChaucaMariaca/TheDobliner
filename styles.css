@@ -363,7 +363,7 @@ body {
 }
 .lists__price--right {
   text-align: right;
-  width: 50px;
+  width: 70px;
 }
 
 .chops {
@@ -638,6 +638,9 @@ body {
   .lists__content {
     width: 85%;
     margin: 0 auto;
+  }
+  .lists__price--right {
+    width: 45px;
   }
 
   .chops__prices {
